@@ -81,17 +81,32 @@ console.log(calcAllAreas(10, 50, 'quadrado'));
 
 // Desafio 7 - Crie a função catAndMouse
 const catAndMouse = (mouse, cat1, cat2) => {
-    if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
-      return `cat1`;
-    } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
-      return `cat2`;
-    } else {
-      return `os gatos trombam e o rato foge`;
-    }
+  if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+    return `cat1`;
+  } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+    return `cat2`;
+  } else {
+    return `os gatos trombam e o rato foge`;
+  }
 }
 console.log(catAndMouse(3, 6, 7));
 // Desafio 8 - Crie a função fizzBuzz
-
+const fizzBuzz = (array) => {
+  let arrayFizzBuzz = []
+  for (index = 0; index < array.length; index += 1) {
+    if (array[index] % 3 === 0 && array[index] % 5 === 0) {
+      arrayFizzBuzz.push(`fizzBuzz`);
+    } else if (array[index] % 5 === 0) {
+      arrayFizzBuzz.push(`buzz`);
+    } else if (array[index] % 3 === 0) {
+      arrayFizzBuzz.push(`fizz`);
+    } else{
+      arrayFizzBuzz.push(`bug!`);
+    }
+  }
+  return arrayFizzBuzz
+}
+console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9 - Crie a função encode e a função decode
 
 // Desafio 10 - Crie a função techList
