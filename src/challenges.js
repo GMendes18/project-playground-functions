@@ -37,13 +37,14 @@ console.log(footballPoints(1, 2));
 console.log(footballPoints(0, 0));
 // Desafio 5 - Crie a função highestCount
 const highestCount = (arrayNumeros) => {
-  let maiorNumero = Math.max.apply(0, arrayNumeros);
+  // let maiorNumero = Math.max.apply(0, arrayNumeros);
+  let maiorNumero = arrayNumeros[0]
   let contador = 0;
-  // for (index = 0; index < arrayNumeros.length; index += 1) {
-  //   if (arrayNumeros[index] > maiorNumero) {
-  //     maiorNumero = arrayNumeros[index]
-  //   }
-  // }
+  for (index = 0; index < arrayNumeros.length; index += 1) {
+    if (arrayNumeros[index] > maiorNumero) {
+      maiorNumero = arrayNumeros[index]
+    }
+  }
   for (index = 0; index < arrayNumeros.length; index += 1) {
     if (maiorNumero === arrayNumeros[index]) {
       contador += 1
@@ -64,21 +65,31 @@ const calcRectangleArea = (base, height) => {
   return base * height;
 }
 const calcAllAreas = (base, height, form) => {
-  if (form === 'triângulo'){
-    return `O valor da área do triângulo é de: ${calcTriangleArea(base,height)}`
-  } else if (form === 'retângulo'){
-    return `O valor da área do retângulo é de: ${calcRectangleArea(base,height)}`
+  if (form === 'triângulo') {
+    return `O valor da área do triângulo é de: ${calcTriangleArea(base, height)}`
+  } else if (form === 'retângulo') {
+    return `O valor da área do retângulo é de: ${calcRectangleArea(base, height)}`
   } else {
     return `Não foi possível fazer o cálculo, insira uma forma geométrica válida`
   }
 }
-console.log(calcTriangleArea(10,50));
-console.log(calcRectangleArea(10,50));
-console.log(calcAllAreas(10,50,'triângulo'));
-console.log(calcAllAreas(10,50,'retângulo'));
-console.log(calcAllAreas(10,50,'quadrado'));
-// Desafio 7 - Crie a função catAndMouse
+console.log(calcTriangleArea(10, 50));
+console.log(calcRectangleArea(10, 50));
+console.log(calcAllAreas(10, 50, 'triângulo'));
+console.log(calcAllAreas(10, 50, 'retângulo'));
+console.log(calcAllAreas(10, 50, 'quadrado'));
 
+// Desafio 7 - Crie a função catAndMouse
+const catAndMouse = (mouse, cat1, cat2) => {
+    if (Math.abs(mouse - cat1) < Math.abs(mouse - cat2)) {
+      return `cat1`;
+    } else if (Math.abs(mouse - cat2) < Math.abs(mouse - cat1)) {
+      return `cat2`;
+    } else {
+      return `os gatos trombam e o rato foge`;
+    }
+}
+console.log(catAndMouse(3, 6, 7));
 // Desafio 8 - Crie a função fizzBuzz
 
 // Desafio 9 - Crie a função encode e a função decode
