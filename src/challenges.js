@@ -17,8 +17,16 @@ const splitSentence = (frase) => {
 console.log(splitSentence('go Trybe'));
 console.log(splitSentence('vamo que vamo'));
 console.log(splitSentence('foguete'));
-// Desafio 3 - Crie a função concatName
 
+// Desafio 3 - Crie a função concatName
+const concatName = (array) => {
+  for (index = 0; index = array.length; index += 1){
+    return `${array[array.length -1]}, ${array[0]}`
+  }
+}
+console.log(concatName(['Lucas', 'Cassiano', 'Ferraz', 'Paolillo']));
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
+console.log(concatName(['captain', 'my', 'captain']));
 // Desafio 4 - Crie a função footballPoints
 
 // Desafio 5 - Crie a função highestCount
