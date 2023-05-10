@@ -132,6 +132,20 @@ console.log(encode('This is an encoding test.'));
 console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
 console.log(decode('H4w 1r2 y45 t4d1y?'));
 // Desafio 10 - Crie a função techList
+const techList = (array,string) =>{
+let arrayObjetos = [];
+if (array.length === 0){
+  array = []
+  return array
+}
+array = array.sort();
+for (index = 0; index < array.length; index +=1){
+  arrayObjetos.push({tech:array[index],name:string });
+}
+return arrayObjetos;
+}
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
+console.log(techList([]))
 
 // Não modifique essas linhas
 module.exports = {
