@@ -100,7 +100,7 @@ const fizzBuzz = (array) => {
       arrayFizzBuzz.push(`buzz`);
     } else if (array[index] % 3 === 0) {
       arrayFizzBuzz.push(`fizz`);
-    } else{
+    } else {
       arrayFizzBuzz.push(`bug!`);
     }
   }
@@ -108,7 +108,29 @@ const fizzBuzz = (array) => {
 }
 console.log(fizzBuzz([2, 15, 7, 9, 45]));
 // Desafio 9 - Crie a função encode e a função decode
-
+const encode = (string) => {
+  let string2 = string
+  string2 = string2.replaceAll('a', '1');
+  string2 = string2.replaceAll('e', '2');
+  string2 = string2.replaceAll('i', '3');
+  string2 = string2.replaceAll('o', '4');
+  string2 = string2.replaceAll('u', '5');
+  return string2
+}
+const decode = (string) => {
+  let string2 = string
+  string2 = string2.replaceAll('1', 'a');
+  string2 = string2.replaceAll('2', 'e');
+  string2 = string2.replaceAll('3', 'i');
+  string2 = string2.replaceAll('4', 'o');
+  string2 = string2.replaceAll('5', 'u');
+  return string2
+}
+console.log(encode('hello'));
+console.log(encode('How are you today?'));
+console.log(encode('This is an encoding test.'));
+console.log(decode('Th3s 3s 1n 2nc4d3ng t2st.'));
+console.log(decode('H4w 1r2 y45 t4d1y?'));
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
